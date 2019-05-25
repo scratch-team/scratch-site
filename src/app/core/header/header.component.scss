@@ -6,14 +6,13 @@
   right: 0;
   left: 0;
   height: 50px;
-  background-color: $orange-normal;
+  background-color: $black-standard;
   font-family: $font-family-standard;
-  border-bottom: 1px solid white;
 
   .navigation-holder {
     display: block;
     height: 100%;
-    margin: 0 50px 0 0;
+    margin: 0;
     @include clearfix();
 
     .navigation-right {
@@ -31,11 +30,8 @@
           outline: none;
           color: white;
           text-decoration: none;
-          font-size: $font-size-big;
-          line-height: 2.3;
-          &:hover {
-            text-decoration: underline;
-          }
+          font-size: $font-size-normal;
+          line-height: 2.8;
         }
       }
     }

@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "gh-pages": "ng build --prod --base-href 'https://martotko.github.io/portfolio-site/'"
+    "gh-pages": "ng build --prod && ngh --dir=dist/scratch-site"
   },
   "private": true,
   "dependencies": {
