@@ -1,0 +1,43 @@
+@import '../../../variables';
+@import '../../../mixins';
+
+.header-holder {
+  position: fixed;
+  right: 0;
+  left: 0;
+  height: 50px;
+  background-color: $orange-normal;
+  font-family: $font-family-standard;
+  border-bottom: 1px solid white;
+
+  .navigation-holder {
+    display: block;
+    height: 100%;
+    margin: 0 50px 0 0;
+    @include clearfix();
+
+    .navigation-right {
+      float: right;
+      margin: 0;
+      text-align: center;
+      height: 100%;
+      li {
+        display: inline-block;
+        margin: 0 20px 0 0;
+        height: 100%;
+        a {
+          display: inline-block;
+          height: 100%;
+          outline: none;
+          color: white;
+          text-decoration: none;
+          font-size: $font-size-big;
+          line-height: 2.3;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
