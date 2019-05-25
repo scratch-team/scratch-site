@@ -9,8 +9,14 @@ const routes: Routes = [
         pathMatch: 'full'
     },
     {
-        path: 'canvas-drawing',
-        loadChildren: './canvas-drawing/canvas-drawing.module#CanvasDrawingModule',
+        path: 'team',
+        loadChildren: './team/team.module#TeamModule',
+        pathMatch: 'full'
+    },
+    {
+        path: 'contact',
+        loadChildren: './contact/contact.module#ContactModule',
+        pathMatch: 'full'
     },
     {
         path: '**',

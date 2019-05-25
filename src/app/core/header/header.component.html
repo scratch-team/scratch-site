@@ -1,15 +1,11 @@
 <div class="header-holder">
-    <div class="navigation-holder">
-        <ul class="navigation-right">
-            <li>
-                <a [routerLink]="['/canvas-drawing']">Drawer</a>
-            </li>
-            <li>
-                <a [routerLink]="['/canvas-drawing']">Team</a>
-            </li>
-            <li>
-                <a [routerLink]="['/contacts']">Contact</a>
-            </li>
-        </ul>
-    </div>
+    <div class="nav-left"><h1 (click)="navigateToHome()">Scratch Team</h1></div>
+    <ul class="nav-right">
+        <li>
+            <a [routerLink]="['/team']">Team</a>
+        </li>
+        <li>
+            <a [routerLink]="['/contact']">Contact</a>
+        </li>
+    </ul>
 </div>

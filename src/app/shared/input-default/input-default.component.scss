@@ -2,10 +2,11 @@
 
 .input-holder {
   position: relative;
-  padding: 10px 0 0;
+  padding: 0;
+
   .label-default {
     position: absolute;
-    top: 19px;
+    top: 8px;
     left: 10px;
     background: white;
     margin: 0;
@@ -17,7 +18,7 @@
     z-index: 1;
 
     &.input-default-focus {
-      top: 3px;
+      top: -8px;
       padding: 0 5px;
       font-size: $font-size-smaller;
     }
@@ -26,8 +27,9 @@
       z-index: -1;
     }
   }
-  
+
   .input-default {
+    margin: 0 0 20px;
     height: 40px;
     width: 100%;
     border: 1px solid $black-standard;
@@ -37,7 +39,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     color: $grey-dark;
-    margin: 0;
     position: relative;
 
     &::placeholder {

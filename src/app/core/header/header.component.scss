@@ -8,31 +8,37 @@
   height: 50px;
   background-color: $black-standard;
   font-family: $font-family-standard;
+  @include clearfix();
 
-  .navigation-holder {
-    display: block;
-    height: 100%;
-    margin: 0;
-    @include clearfix();
-
-    .navigation-right {
-      float: right;
+  .nav-left {
+    float: left;
+    margin: 0 0 0 20px;
+    h1 {
       margin: 0;
-      text-align: center;
+      color: $white-standard;
+      font-size: $font-size-normal;
+      line-height: 2.8;
+      cursor: pointer;
+    }
+  }
+
+  .nav-right {
+    float: right;
+    margin: 0;
+    text-align: center;
+    height: 100%;
+    li {
+      display: inline-block;
+      margin: 0 20px 0 0;
       height: 100%;
-      li {
+      a {
         display: inline-block;
-        margin: 0 20px 0 0;
         height: 100%;
-        a {
-          display: inline-block;
-          height: 100%;
-          outline: none;
-          color: white;
-          text-decoration: none;
-          font-size: $font-size-normal;
-          line-height: 2.8;
-        }
+        outline: none;
+        color: $white-standard;
+        text-decoration: none;
+        font-size: $font-size-normal;
+        line-height: 2.8;
       }
     }
   }

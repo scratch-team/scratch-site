@@ -1,0 +1,10 @@
+@import '../../../variables';
+
+.contact-holder {
+  .contact-title {
+    text-align: center;
+    margin: 20px 0 30px;
+    font-size: $font-size-bigger;
+    font-family: $font-family-standard;
+  }
+}
