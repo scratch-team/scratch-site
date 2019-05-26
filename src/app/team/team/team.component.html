@@ -1,3 +1,5 @@
 <div class="team-holder">
-    <app-team-member-preview></app-team-member-preview>
+    <div class="col-xs-12 col-md-6" *ngFor="let member of teamMembers">
+        <app-team-member-preview [memberInfo]="member"></app-team-member-preview>
+    </div>
 </div>

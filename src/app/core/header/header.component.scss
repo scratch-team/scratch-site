@@ -3,9 +3,11 @@
 
 .header-holder {
   position: fixed;
+  top: 0;
   right: 0;
   left: 0;
   height: 50px;
+  z-index: 1030;
   background-color: $black-standard;
   font-family: $font-family-standard;
   @include clearfix();

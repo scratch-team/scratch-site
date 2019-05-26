@@ -5,10 +5,25 @@
   height: 300px;
   width: 100%;
   @include clearfix();
+  font-family: $font-family-standard;
+  text-align: center;
 
   .member-image {
-    height: 100%;
-    width: 50%;
+    width: 150px;
+    min-height: 200px;
     border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .member-name {
+  }
+
+  .member-profession {
+    font-size: $font-size-normal;
+    margin: 0;
+
+    .member-linkedIn {
+      text-decoration: none;
+    }
   }
 }

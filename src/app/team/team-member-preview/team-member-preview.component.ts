@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TeamMember } from '../team.types';
 
 @Component({
     selector: 'app-team-member-preview',
@@ -6,10 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
     styleUrls: ['./team-member-preview.component.scss'],
 })
 export class TeamMemberPreviewComponent implements OnInit {
-    @Input() memberInfo = {
-        id: 'asfsagagwag',
-        imgUrl: 'assets/images/martin.jpg'
-    };
+    @Input() memberInfo: TeamMember;
     constructor() {}
 
     ngOnInit() {}
