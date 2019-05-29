@@ -6,20 +6,22 @@
   top: 0;
   right: 0;
   left: 0;
-  height: 50px;
+  padding: 20px 0;
   z-index: 1030;
-  background-color: $color-black;
+  background-color: $color-white;
   font-family: $font-family-standard;
   @include clearfix();
+  box-shadow: $box-shadow-standard;
 
   .nav-left {
     float: left;
-    margin: 0 0 0 20px;
+    margin: 0 0 0 30px;
+
     h1 {
       margin: 0;
-      color: $color-white;
-      font-size: $font-size-normal;
-      line-height: 2.8;
+      color: $color-black;
+      font-size: $font-size-big;
+      line-height: 2.25;
       cursor: pointer;
     }
   }
@@ -29,18 +31,23 @@
     margin: 0;
     text-align: center;
     height: 100%;
+    padding: 0;
     li {
       display: inline-block;
-      margin: 0 20px 0 0;
+      margin: 0 30px 0 0;
       height: 100%;
+
       a {
         display: inline-block;
         height: 100%;
         outline: none;
-        color: $color-white;
+        color: $color-font-standard;
         text-decoration: none;
-        font-size: $font-size-normal;
-        line-height: 2.8;
+        font-size: $font-size-small;
+        line-height: 3.2;
+        &:hover {
+          color: $color-main;
+        }
       }
     }
   }
