@@ -20,7 +20,7 @@
     &.input-default-focus {
       top: -8px;
       padding: 0 5px;
-      border: 0.5px solid black;
+      border: 0.5px solid $color-black;
       border-radius: 10px;
       font-size: $font-size-smaller;
     }
@@ -34,17 +34,17 @@
     margin: 0 0 20px;
     height: 40px;
     width: 100%;
-    border: 1px solid $black;
+    border: 1px solid $color-black;
     border-radius: 5px;
     outline: none;
     padding: 0 0 0 10px;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: $black;
+    color: $color-black;
     position: relative;
 
     &::placeholder {
-      color: $black;
+      color: $color-black;
     }
   }
 }
