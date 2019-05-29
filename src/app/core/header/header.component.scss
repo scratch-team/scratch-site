@@ -8,7 +8,7 @@
   left: 0;
   height: 50px;
   z-index: 1030;
-  background-color: $black-standard;
+  background-color: $black;
   font-family: $font-family-standard;
   @include clearfix();
 
@@ -17,7 +17,7 @@
     margin: 0 0 0 20px;
     h1 {
       margin: 0;
-      color: $white-standard;
+      color: $white;
       font-size: $font-size-normal;
       line-height: 2.8;
       cursor: pointer;
@@ -37,7 +37,7 @@
         display: inline-block;
         height: 100%;
         outline: none;
-        color: $white-standard;
+        color: $white;
         text-decoration: none;
         font-size: $font-size-normal;
         line-height: 2.8;

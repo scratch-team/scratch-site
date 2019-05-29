@@ -34,17 +34,17 @@
     margin: 0 0 20px;
     height: 40px;
     width: 100%;
-    border: 1px solid $black-standard;
+    border: 1px solid $black;
     border-radius: 5px;
     outline: none;
     padding: 0 0 0 10px;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: $grey-dark;
+    color: $black;
     position: relative;
 
     &::placeholder {
-      color: $grey-dark;
+      color: $black;
     }
   }
 }
