@@ -35,16 +35,16 @@
     }
   }
 
+  .home-section-title {
+    color: $color-black;
+    font-size: $font-size-big;
+  }
+
   .home-services-holder {
     text-align: center;
 
     .home-services-column {
       margin: 20px 0;
-    }
-
-    .home-services-title {
-      color: $color-black;
-      font-size: $font-size-big;
     }
 
     .home-square-title {
@@ -71,5 +71,13 @@
       left: 17px;
       transform: rotate(-45deg);
     }
+  }
+
+  .home-technologies-holder {
+    text-align: center;
+  }
+
+  .home-team-holder {
+    text-align: center;
   }
 }

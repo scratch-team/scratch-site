@@ -20,8 +20,7 @@
     &.input-default-focus {
       top: -8px;
       padding: 0 5px;
-      border: 0.5px solid $color-black;
-      border-radius: 10px;
+      border: 0.5px solid $color-main;
       font-size: $font-size-smaller;
     }
 
@@ -34,8 +33,7 @@
     margin: 0 0 20px;
     height: 40px;
     width: 100%;
-    border: 1px solid $color-black;
-    border-radius: 5px;
+    border: 1px solid $color-main;
     outline: none;
     padding: 0 0 0 10px;
     overflow: hidden;
