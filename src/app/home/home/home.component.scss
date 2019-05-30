@@ -44,10 +44,11 @@
 
     .home-services-title {
       color: $color-black;
+      font-size: $font-size-big;
+    }
 
-      @media (max-width: 1024px) {
-        font-size: $font-size-big;
-      }
+    .home-square-title {
+      font-size: $font-size-big;
     }
 
     .home-square-paragraph {
