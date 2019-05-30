@@ -1,29 +1,33 @@
 @import '../../../variables';
 @import '../../../mixins';
 
-.team-member-holder {
-  height: 300px;
-  width: 100%;
+.member-holder {
   @include clearfix();
   font-family: $font-family-standard;
   text-align: center;
+  margin: 0 0 40px;
 
   .member-image {
-    width: 150px;
-    min-height: 200px;
-    border-radius: 50%;
+    width: 200px;
+    min-height: 250px;
     object-fit: cover;
+    border: 1px solid $color-main;
   }
 
   .member-name {
+    font-size: $font-size-big;
+    color: $color-main;
   }
 
   .member-profession {
     font-size: $font-size-normal;
     margin: 0;
+    color: $color-font-standard;
 
     .member-linkedIn {
       text-decoration: none;
+      color: $color-main;
+      cursor: pointer;
     }
   }
 }

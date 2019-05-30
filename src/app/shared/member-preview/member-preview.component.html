@@ -1,0 +1,7 @@
+<div class="member-holder" *ngIf="memberInfo">
+    <img class="member-image" src="{{ memberInfo?.imgUrl }}" alt="Member Image" />
+    <h1 class="member-name">{{ memberInfo?.firstName }} {{ memberInfo?.lastName }}</h1>
+    <h3 class="member-profession">
+        {{ memberInfo?.profession }} | <a class="member-linkedIn" href="{{ memberInfo?.linkedIn }}">LinkedIn</a>
+    </h3>
+</div>

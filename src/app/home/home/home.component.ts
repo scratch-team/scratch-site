@@ -1,15 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { TeamMember } from 'src/app/shared/member-preview/member-preview.component';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class HomeComponent {
+    public teamMembers: TeamMember[] = [
+        {
+            id: '1',
+            imgUrl: 'assets/images/martin.jpg',
+            firstName: 'Martin',
+            lastName: 'Georgiev',
+            profession: 'Front End Developer',
+            linkedIn: 'https://www.linkedin.com/in/martin-georgiev-797319b9/',
+        },
+        {
+            id: '2',
+            imgUrl: 'assets/images/sasho.jpg',
+            firstName: 'Alexander',
+            lastName: 'Kolarov',
+            profession: 'JavaScript Developer',
+            linkedIn: 'https://www.linkedin.com/in/martin-georgiev-797319b9/',
+        },
+    ];
 }

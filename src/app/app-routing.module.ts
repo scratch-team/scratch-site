@@ -9,11 +9,6 @@ const routes: Routes = [
         pathMatch: 'full'
     },
     {
-        path: 'team',
-        loadChildren: './team/team.module#TeamModule',
-        pathMatch: 'full'
-    },
-    {
         path: 'contact',
         loadChildren: './contact/contact.module#ContactModule',
         pathMatch: 'full'
