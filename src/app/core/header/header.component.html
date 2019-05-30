@@ -1,13 +1,16 @@
 <div class="header-holder">
-    <div class="nav-left">
-        <h1 (click)="navigateToHome()">Scratch Team</h1>
+    <div class="nav-left" (click)="navigateToHome()">
+        <div class="header-square">
+            <span class="header-square-letter">S</span>
+        </div>
+        <h1 >Scratch Team</h1>
     </div>
     <ul class="nav-right">
         <li>
-            <a [routerLink]="['/team']">TEAM</a>
+            <a [routerLink]="['/team']" [routerLinkActive]="['is-active']">TEAM</a>
         </li>
         <li>
-            <a [routerLink]="['/contact']">CONTACT</a>
+            <a [routerLink]="['/contact']" [routerLinkActive]="['is-active']">CONTACT</a>
         </li>
     </ul>
 </div>
