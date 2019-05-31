@@ -1,7 +1,11 @@
 @import '../../../variables';
+@import '../../../mixins';
 
 .separator-holder {
   margin: 0 0 20px;
+  width: 100%;
+  text-align: center;
+  @include clearfix();
   span {
     position: relative;
     color: $color-main;
@@ -26,9 +30,6 @@
       left: 100%;
       width: 60px;
       position: absolute;
-    }
-
-    i {
     }
   }
 }
