@@ -24,6 +24,10 @@
     margin: 0;
     color: $color-font-standard;
 
+    i {
+      color: $color-main;
+      margin: 0 2px 0;
+    }
     .member-linkedIn {
       text-decoration: none;
       color: $color-main;
