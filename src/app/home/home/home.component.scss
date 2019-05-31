@@ -35,7 +35,7 @@
       top: 25%;
       margin: 0;
       transform: translateY(-50%);
-      font-size: $font-size-biggest;
+      font-size: 50px;
       @media (max-width: 1024px) {
         font-size: $font-size-big;
       }
@@ -44,8 +44,12 @@
 
   .home-section-title {
     color: $color-black;
-    font-size: $font-size-big;
+    font-size: $font-size-bigger;
     margin: 30px 0 10px;
+
+    @media (max-width: 1024px) {
+        font-size: $font-size-big;
+    }
   }
 
   .home-services-holder {
@@ -111,6 +115,5 @@
 
   .home-team-holder {
     text-align: center;
-    
   }
 }
