@@ -1,9 +1,10 @@
 <div class="home-holder">
     <div class="home-title-holder">
-        <h1 class="home-title">AT SCRATCH WE LOVE FUNCTIONAL WEBSITES AND MOBILE APPS</h1>
+        <h1 class="home-title">AT SCRATCH WE LOVE WEB SITES AND MOBILE APPS</h1>
     </div>
     <div class="home-services-holder">
         <h2 class="home-section-title">SCRATCH SERVICES</h2>
+        <app-separator iconType="laptop"></app-separator>
         <div class="home-services-column col-xs-12 col-sm-6">
             <app-square-icon><span class="home-square-web">Web</span></app-square-icon>
             <h2 class="home-square-title">Web Development</h2>
@@ -15,15 +16,25 @@
             <app-square-icon><i class="home-square-mobile fa fa-mobile"></i></app-square-icon>
             <h2 class="home-square-title">Mobile Development</h2>
             <p class="home-square-paragraph">
-                Hybrid Mobile Development with React Native / NativeScript on IOS and Android.
+                Mobile Development with React Native / NativeScript for IOS and Android.
             </p>
         </div>
     </div>
-    <div class="home-technologies-holder">
+    <div class="home-technologies-holder col-xs-12">
         <h2 class="home-section-title">TECHNOLOGIES</h2>
+        <app-separator iconType="paper-plane"></app-separator>
+        <div class="home-technologies-react-logo col-xs-6 col-sm-4"></div>
+        <div class="home-technologies-node-logo col-xs-6 col-sm-4"></div>
+        <div class="home-technologies-typescript-logo col-xs-6 col-sm-4"></div>
+        <div class="home-technologies-angular-logo col-xs-6 col-sm-4"></div>
+        <div class="home-technologies-web-development-logo col-xs-6 col-sm-4"></div>
+        <div class="home-technologies-pixi-logo col-xs-6 col-sm-4"></div>
+        <div class="home-technologies-nativescript-logo col-xs-6 col-sm-4"></div>
+        <div class="home-technologies-react-native-logo col-xs-6 col-sm-4"></div>
     </div>
-    <div class="home-team-holder">
+    <div class="home-team-holder col-xs-12">
         <h2 class="home-section-title">TEAM</h2>
+        <app-separator iconType="user"></app-separator>
         <div *ngFor="let member of teamMembers" class="col-xs-12 col-sm-6">
             <app-member-preview [memberInfo]="member"></app-member-preview>
         </div>

@@ -1,5 +1,12 @@
 @import '../../../variables';
 
+@mixin load-background-image($url) {
+  text-align: center;
+  background: url($url) no-repeat center;
+  background-size: contain;
+  height: 150px;
+}
+
 .home-holder {
   .home-title-holder {
     background-image: url('../../../assets/images/home-page-img.jpg');
@@ -38,7 +45,7 @@
   .home-section-title {
     color: $color-black;
     font-size: $font-size-big;
-    margin: 30px 0 20px;
+    margin: 30px 0 10px;
   }
 
   .home-services-holder {
@@ -76,9 +83,34 @@
 
   .home-technologies-holder {
     text-align: center;
+    .home-technologies-angular-logo {
+      @include load-background-image('../../../assets/images/angular.png');
+    }
+    .home-technologies-nativescript-logo {
+      @include load-background-image('../../../assets/images/nativescript.png');
+    }
+    .home-technologies-node-logo {
+      @include load-background-image('../../../assets/images/node-js-logo.png');
+    }
+    .home-technologies-pixi-logo {
+      @include load-background-image('../../../assets/images/pixi-logo.png');
+    }
+    .home-technologies-react-logo {
+      @include load-background-image('../../../assets/images/react-logo.png');
+    }
+    .home-technologies-react-native-logo {
+      @include load-background-image('../../../assets/images/react-native-logo.png');
+    }
+    .home-technologies-typescript-logo {
+      @include load-background-image('../../../assets/images/typescript-logo.png');
+    }
+    .home-technologies-web-development-logo {
+      @include load-background-image('../../../assets/images/web-development-logo.png');
+    }
   }
 
   .home-team-holder {
     text-align: center;
+    
   }
 }
