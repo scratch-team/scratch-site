@@ -24,5 +24,13 @@ export class HomeComponent {
             profession: 'JavaScript Developer',
             linkedIn: 'https://www.linkedin.com/in/martin-georgiev-797319b9/',
         },
+        {
+            id: '3',
+            imgUrl: 'assets/images/mirela.jpg',
+            firstName: 'Mirela',
+            lastName: 'Cvetkova',
+            profession: 'Manual Quality Assurance',
+            linkedIn: 'https://www.linkedin.com/in/mirela-cvetkova-287895177/',
+        },
     ];
 }
