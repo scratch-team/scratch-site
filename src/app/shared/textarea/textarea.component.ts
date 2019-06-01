@@ -1,18 +1,30 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, forwardRef } from '@angular/core';
+import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+
+const VALUE_ACCESSOR = {
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: forwardRef(() => TextareaComponent),
+    multi: true,
+};
 
 @Component({
     selector: 'app-textarea',
     templateUrl: './textarea.component.html',
     styleUrls: ['./textarea.component.scss'],
+    providers: [VALUE_ACCESSOR],
 })
-export class TextareaComponent {
+export class TextareaComponent implements ControlValueAccessor {
     @Input() label: string = '';
     public isOnFocus: boolean = false;
 
     private _value: string = '';
+    onChange: any;
+    onTouch: any;
 
     public set value(v: string) {
         this._value = v;
+        this.onChange(v);
+        this.onTouch();
     }
 
     public get value(): string {
@@ -25,5 +37,20 @@ export class TextareaComponent {
 
     public onInputBlur() {
         this.isOnFocus = false;
+        this.onTouch();
+    }
+
+    writeValue(obj: any): void {
+        if (obj) {
+            this.value = obj;
+        }
+    }
+
+    registerOnChange(fn: any): void {
+        this.onChange = fn;
+    }
+
+    registerOnTouched(fn: any): void {
+        this.onTouch = fn;
     }
 }

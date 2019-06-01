@@ -2,7 +2,7 @@
 @import '../../../variables';
 
 .footer-holder {
-  height: 80px;
+  min-height: 80px;
   background-color: $color-black;
   @include clearfix();
 

@@ -5,9 +5,19 @@ import { ContactRoutingModule } from './contact-routing.module';
 import { InputDefaultModule } from '../shared/input-default/input-default.module';
 import { TextareaModule } from '../shared/textarea/textarea.module';
 import { SeparatorModule } from '../shared/separator/separator.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ButtonFullWidthModule } from '../shared/button-full-width/button-full-width.module';
 
 @NgModule({
-    imports: [CommonModule, ContactRoutingModule, InputDefaultModule, TextareaModule, SeparatorModule],
+    imports: [
+        CommonModule,
+        ContactRoutingModule,
+        InputDefaultModule,
+        TextareaModule,
+        SeparatorModule,
+        ReactiveFormsModule,
+        ButtonFullWidthModule,
+    ],
     declarations: [ContactComponent],
 })
 export class ContactModule {}

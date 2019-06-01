@@ -1,8 +1,19 @@
-<div class="contact-holder col-xs-12 col-sm-6 col-sm-offset-3">
+<div class="contact-holder col-xs-12 col-sm-8 col-sm-offset-2">
     <h1 class="contact-title">DISCUSS YOUR PROJECT WITH US</h1>
     <app-separator iconType="envelope"></app-separator>
-    <app-input-default label="Name"></app-input-default>
-    <app-input-default label="E-mail"></app-input-default>
-    <app-input-default label="Phone"></app-input-default>
-    <app-textarea label="About Your Project"></app-textarea>
+
+    <div class="col-xs-12 contact-info">
+        <h5><i class="fa fa-globe"></i> Location: Sofia, Bulgaria</h5>
+        <h5><i class="fa fa-envelope-o"></i> Email: scratchwebteam@gmail.com</h5>
+        <h5><i class="fa fa-phone"></i> Phone: +359 98 897 2539</h5>
+    </div>
+    <div class="col-xs-12">
+        <form [formGroup]="contactForm">
+            <app-input-default label="Name" formControlName="name"></app-input-default>
+            <app-input-default label="E-mail" formControlName="email"></app-input-default>
+            <app-input-default label="Phone" formControlName="phoneNumber"></app-input-default>
+            <app-textarea label="About Your Project" formControlName="projectDescription"></app-textarea>
+            <app-button-full-width label="Submit" (onClick)="submitForm()"></app-button-full-width>
+        </form>
+    </div>
 </div>
