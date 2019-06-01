@@ -3,6 +3,7 @@
 .input-holder {
   position: relative;
   padding: 0;
+  padding: 0 0 25px;
 
   .label-default {
     position: absolute;
@@ -30,7 +31,7 @@
   }
 
   .input-default {
-    margin: 0 0 20px;
+    margin: 0;
     height: 40px;
     width: 100%;
     border: 1px solid $color-main;

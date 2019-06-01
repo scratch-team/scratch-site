@@ -9,10 +9,18 @@
     </div>
     <div class="col-xs-12">
         <form [formGroup]="contactForm">
-            <app-input-default label="Name" formControlName="name"></app-input-default>
-            <app-input-default label="E-mail" formControlName="email"></app-input-default>
-            <app-input-default label="Phone" formControlName="phoneNumber"></app-input-default>
-            <app-textarea label="About Your Project" formControlName="projectDescription"></app-textarea>
+            <app-input-default label="Name" formControlName="name">
+                <app-validation [isInvalid]="name.touched && name.invalid"></app-validation>
+            </app-input-default>
+            <app-input-default label="E-mail" formControlName="email">
+                <app-validation [isInvalid]="email.touched && email.invalid"></app-validation>
+            </app-input-default>
+            <app-input-default label="Phone" formControlName="phoneNumber">
+                <app-validation [isInvalid]="phoneNumber.touched && phoneNumber.invalid" label="The field should be between 6 and 22 symbols."></app-validation>
+            </app-input-default>
+            <app-textarea label="About Your Project" formControlName="description">
+                <app-validation [isInvalid]="description.touched && description.invalid" label="The field should be between 50 and 10000 symbols."></app-validation>
+            </app-textarea>
             <app-button-full-width label="Submit" (onClick)="submitForm()"></app-button-full-width>
         </form>
     </div>

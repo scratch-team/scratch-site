@@ -23,8 +23,6 @@ export class TextareaComponent implements ControlValueAccessor {
 
     public set value(v: string) {
         this._value = v;
-        this.onChange(v);
-        this.onTouch();
     }
 
     public get value(): string {
@@ -33,6 +31,11 @@ export class TextareaComponent implements ControlValueAccessor {
 
     public onInputFocus() {
         this.isOnFocus = true;
+        this.onChange(this.value);
+    }
+
+    public onInputChange() {
+        this.onChange(this.value);
     }
 
     public onInputBlur() {
@@ -41,9 +44,7 @@ export class TextareaComponent implements ControlValueAccessor {
     }
 
     writeValue(obj: any): void {
-        if (obj) {
-            this.value = obj;
-        }
+        this.value = obj;
     }
 
     registerOnChange(fn: any): void {

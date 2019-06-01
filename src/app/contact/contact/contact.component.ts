@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FirebaseService } from 'src/app/shared/services/firebase.service';
+import { ToastrService } from 'ngx-toastr';
 @Component({
     selector: 'app-contact',
     templateUrl: './contact.component.html',
@@ -9,14 +11,18 @@ export class ContactComponent implements OnInit {
     public contactForm: FormGroup;
     private buttonClicked: boolean;
 
-    constructor(private fb: FormBuilder) {}
+    constructor(
+        private fb: FormBuilder,
+        private firebaseService: FirebaseService,
+        private toastrService: ToastrService
+    ) {}
 
     ngOnInit() {
         this.contactForm = this.fb.group({
             name: ['', Validators.required],
             email: ['', Validators.required],
-            phoneNumber: ['', Validators.required],
-            projectDescription: ['', Validators.required],
+            phoneNumber: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(22)]],
+            description: ['', [Validators.required, Validators.minLength(50), Validators.maxLength(10000)]],
         });
     }
 
@@ -29,16 +35,28 @@ export class ContactComponent implements OnInit {
     public get phoneNumber() {
         return this.contactForm.get('phoneNumber');
     }
-    public get projectDescription() {
-        return this.contactForm.get('projectDescription');
+    public get description() {
+        return this.contactForm.get('description');
     }
 
     public submitForm() {
-        this.buttonClicked = true;
         if (this.contactForm.valid && !this.buttonClicked) {
-            this.buttonClicked = false;
+            this.buttonClicked = true;
+            this.firebaseService
+                .createMessage(this.contactForm.value)
+                .then(v => {
+                    this.buttonClicked = false;
+                    this.toastrService.success('Message send Successful!');
+                    this.contactForm.reset();
+                })
+                .catch(err => {
+                    this.buttonClicked = false;
+                    this.toastrService.error('Something is wrong! Please try again!');
+                });
         } else {
-            this.buttonClicked = false;
+            // Mark fields as touched to trigger validations
+            this.toastrService.warning('Please fill all fields in the form!');
+            Object.values(this.contactForm.controls).forEach(key => key.markAsTouched());
         }
     }
 }

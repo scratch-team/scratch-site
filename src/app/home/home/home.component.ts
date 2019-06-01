@@ -26,6 +26,14 @@ export class HomeComponent {
         },
         {
             id: '3',
+            imgUrl: 'assets/images/sasho-bor.jpg',
+            firstName: 'Alexander',
+            lastName: 'Yordanov',
+            profession: 'SQL Master',
+            linkedIn: 'https://www.linkedin.com/in/alexander-yordanov-69948a8b/',
+        },
+        {
+            id: '4',
             imgUrl: 'assets/images/mirela.jpg',
             firstName: 'Mirela',
             lastName: 'Cvetkova',

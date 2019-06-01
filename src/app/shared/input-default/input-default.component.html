@@ -6,7 +6,9 @@
         [(ngModel)]="value"
         id="{{ randomInputId }}"
         (click)="onInputFocus()"
+        (change)="onInputChange()"
         (blur)="onInputBlur()"
         class="input-default"
     />
+    <ng-content></ng-content>
 </div>

@@ -22,8 +22,6 @@ export class InputDefaultComponent implements OnInit, ControlValueAccessor {
 
     public set value(v: string) {
         this._value = v;
-        this.onChange(v);
-        this.onTouch();
     }
 
     public get value(): string {
@@ -38,6 +36,11 @@ export class InputDefaultComponent implements OnInit, ControlValueAccessor {
 
     public onInputFocus() {
         this.isOnFocus = true;
+        this.onChange(this.value);
+    }
+
+    public onInputChange() {
+        this.onChange(this.value);
     }
 
     public onInputBlur() {
@@ -46,9 +49,7 @@ export class InputDefaultComponent implements OnInit, ControlValueAccessor {
     }
 
     writeValue(obj: any): void {
-        if (obj) {
-            this.value = obj;
-        }
+        this.value = obj;
     }
 
     registerOnChange(fn: any): void {

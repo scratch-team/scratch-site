@@ -7,6 +7,7 @@ import { TextareaModule } from '../shared/textarea/textarea.module';
 import { SeparatorModule } from '../shared/separator/separator.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonFullWidthModule } from '../shared/button-full-width/button-full-width.module';
+import { ValidationModule } from '../shared/validation/validation.module';
 
 @NgModule({
     imports: [
@@ -17,6 +18,7 @@ import { ButtonFullWidthModule } from '../shared/button-full-width/button-full-w
         SeparatorModule,
         ReactiveFormsModule,
         ButtonFullWidthModule,
+        ValidationModule
     ],
     declarations: [ContactComponent],
 })
